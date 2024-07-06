@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Code\\Web\\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\\ProjectCS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45913326-BAD9-46E6-A53F-F92D84E5D6C5}|ProjectCS\\ProjectCS.csproj|c:\\code\\web\\nhom17_7340-cuong_7575-huy_8106-tinh\\nhom17_7340-cuong_7575-huy_8106-tinh\\projectcs\\projectcs\\areas\\teacher\\views\\teacher\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45913326-BAD9-46E6-A53F-F92D84E5D6C5}|ProjectCS\\ProjectCS.csproj|solutionrelative:projectcs\\areas\\teacher\\views\\teacher\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45913326-BAD9-46E6-A53F-F92D84E5D6C5}|ProjectCS\\ProjectCS.csproj|c:\\code\\web\\nhom17_7340-cuong_7575-huy_8106-tinh\\nhom17_7340-cuong_7575-huy_8106-tinh\\projectcs\\projectcs\\areas\\teacher\\views\\shared\\_layoutteacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{45913326-BAD9-46E6-A53F-F92D84E5D6C5}|ProjectCS\\ProjectCS.csproj|solutionrelative:projectcs\\areas\\teacher\\views\\shared\\_layoutteacher.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_LayoutTeacher.cshtml",
+              "DocumentMoniker": "C:\\Code\\Web\\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\\ProjectCS\\ProjectCS\\Areas\\Teacher\\Views\\Shared\\_LayoutTeacher.cshtml",
+              "RelativeDocumentMoniker": "ProjectCS\\Areas\\Teacher\\Views\\Shared\\_LayoutTeacher.cshtml",
+              "ToolTip": "C:\\Code\\Web\\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\\ProjectCS\\ProjectCS\\Areas\\Teacher\\Views\\Shared\\_LayoutTeacher.cshtml",
+              "RelativeToolTip": "ProjectCS\\Areas\\Teacher\\Views\\Shared\\_LayoutTeacher.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAADIAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-16T15:28:48.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Code\\Web\\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\\ProjectCS\\ProjectCS\\Areas\\Teacher\\Views\\Teacher\\Index.cshtml",
+              "RelativeDocumentMoniker": "ProjectCS\\Areas\\Teacher\\Views\\Teacher\\Index.cshtml",
+              "ToolTip": "C:\\Code\\Web\\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\\ProjectCS\\ProjectCS\\Areas\\Teacher\\Views\\Teacher\\Index.cshtml",
+              "RelativeToolTip": "ProjectCS\\Areas\\Teacher\\Views\\Teacher\\Index.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAABAAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-16T14:17:31.57Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+﻿@model ProjectCS.Models.Assign
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Teacher/Views/Shared/_LayoutTeacher.cshtml";
+
+    var list = ViewBag.ListClass as List<Class> ?? new List<Class>();
+}
+
+<nav class="sb-topnav navbar navbar-expand navbar-light bg-light" style="border-bottom: 1px solid #b8b6b6">
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+    <a class="navbar-brand ps-3 d-flex align-items-center" asp-area="Teacher" asp-controller="Teacher" asp-action="Index">
+        <img src="~/classroom-icon-free-vector.jpg" alt="Lớp Học" style="height: 40px; width: auto;">
+        <span class="ms-2">Lớp học</span>
+    </a>
+    <div class="ms-auto">
+        <partial name="_LoginPartial" />
+    </div>
+</nav>
+
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion" style="border-right: 1px solid #b8b6b6">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <a class="nav-link" asp-area="Teacher" asp-controller="Teacher" asp-action="Index" style="border-bottom: 1px solid #b8b6b6">Home</a>
+                    <div class="sb-sidenav-menu-heading">Chức năng</div>
+                    <a class="nav-link" asp-area="Teacher" asp-controller="Teacher" asp-action="Create">Tạo lớp học</a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Class
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            @foreach (var item in list)
+                            {
+                                <a class="nav-link text-dark" asp-area="Teacher" asp-controller="Teacher" asp-action="Details" asp-route-id="@item.ClassId">@item.Name</a>
+                            }
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="sb-sidenav-footer"></div>
+        </nav>
+    </div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <div class="card shadow-sm my-4" style="width: 40%; margin-left: 0;">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="mb-0">Edit Assignment</h1>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Edit">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <input type="hidden" asp-for="AssignId" />
+                            <div class="mb-3">
+                                <label asp-for="AssignName" class="control-label">Tên Bài Tập</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-font"></i></span>
+                                    <input asp-for="AssignName" class="form-control" />
+                                </div>
+                                <span asp-validation-for="AssignName" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="Description" class="control-label">Mô tả</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-align-left"></i></span>
+                                    <textarea id="description" asp-for="Description" class="form-control">@Html.Raw(Model.Description)</textarea>
+                                </div>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3" hidden>
+                                <input asp-for="Posttime" class="form-control" value="@ViewBag.Time" />
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="AssignFile1" class="control-label">Tệp Đính Kèm 1</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-file"></i></span>
+                                    <input asp-for="AssignFile1" type="file" class="form-control" onchange="previewFile(event, 'file1-preview')" />
+                                </div>
+                                <span asp-validation-for="AssignFile1" class="text-danger">@ViewBag.File1</span>
+                                <img id="file1-preview" src="#" alt="Preview" style="display:none; width: 100px; height: auto;" />
+                            </div>
+                            <div class="mb-3">
+                                <label asp-for="AssignFile2" class="control-label">Tệp Đính Kèm 2</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-file"></i></span>
+                                    <input asp-for="AssignFile2" type="file" class="form-control" onchange="previewFile(event, 'file2-preview')" />
+                                </div>
+                                <span asp-validation-for="AssignFile2" class="text-danger">@ViewBag.File2</span>
+                                <img id="file2-preview" src="#" alt="Preview" style="display:none; width: 100px; height: auto;" />
+                            </div>
+                            <div class="mb-3" hidden>
+                                <select asp-for="ClassId" class="form-control" asp-items="ViewBag.ClassId"></select>
+                                <span asp-validation-for="ClassId" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3" hidden>
+                                <select asp-for="LoaiId" class="form-control" asp-items="ViewBag.LoaiId"></select>
+                                <span asp-validation-for="LoaiId" class="text-danger"></span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <button type="submit" class="btn btn-primary" value="Save"><i class="fas fa-save"></i> Lưu</button>
+                                <a class="btn btn-secondary" asp-action="Index" asp-route-id="@ViewBag.Id"><i class="fas fa-arrow-left"></i>Quay về trang chủ</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        tinymce.init({
+            selector: '#description',
+            height: 300,
+            plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+            toolbar: 'undo redo | formatselect | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | link image',
+            toolbar_mode: 'floating',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+        });
+        function previewFile(event, previewElementId) {
+            var input = event.target;
+            var preview = document.getElementById(previewElementId);
+            var reader = new FileReader();
+
+            reader.onload = function () {
+                if (reader.readyState == 2) {
+                    preview.src = reader.result;
+                    preview.style.display = 'block';
+                }
+            }
+
+            if (input.files && input.files[0]) {
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+        $(document).ready(function () {
+            $('#post-form').submit(function (e) {
+                e.preventDefault();
+                var content = tinyMCE.activeEditor.getContent({ format: 'text' });
+                var formData = {
+                    assignName: $('#assign-name').val(),
+                    description: content,
+                    classId: $('#class-id').val()
+                };
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            var descriptionContent = '@Html.Raw(Model.Description)';
+            tinymce.get('description').setContent(descriptionContent);
+        });
+    </script>
+}

@@ -1,0 +1,162 @@
+﻿@model ProjectCS.Models.Assign
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Tạo Bài Tập";
+    Layout = "~/Areas/Teacher/Views/Shared/_LayoutTeacher.cshtml";
+    var list = ViewBag.ListClass as List<Class> ?? new List<Class>();
+}
+
+<nav class="sb-topnav navbar navbar-expand navbar-light bg-light" style="border-bottom: 1px solid #b8b6b6">
+    <!-- Sidebar Toggle-->
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+    <!-- Navbar Brand-->
+    <a class="navbar-brand ps-3" class="nav-link" asp-area="Teacher" asp-controller="Teacher" asp-action="Index"> <img src="~/classroom-icon-free-vector.jpg" alt="Lớp Học" style="height: 40px; width: auto;">Lớp học</a>
+    <!-- Move partial to the right -->
+    <div class="ms-auto">
+        <partial name="_LoginPartial" />
+    </div>
+</nav>
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion" style="border-right: 1px solid #b8b6b6">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <a class="nav-link" asp-area="Teacher" asp-controller="Teacher" asp-action="Index" style="border-bottom: 1px solid #b8b6b6">Trang chủ</a>
+                    <div class="sb-sidenav-menu-heading">Chức năng</div>
+                    <a class="nav-link" asp-area="Teacher" asp-controller="Teacher" asp-action="Create">Tạo lớp học</a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Lớp học
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            @foreach (var item in list)
+                            {
+                                <a class="nav-link text-dark" asp-area="Teacher" asp-controller="Teacher" asp-action="Details" asp-route-id="@item.ClassId">@item.Name</a>
+                            }
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="sb-sidenav-footer">
+            </div>
+        </nav>
+    </div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <!-- Enhanced Title Section -->
+                <div class="jumbotron jumbotron-fluid text-white text-center mb-4" style="background: linear-gradient(to right, #00c6ff, #0072ff); padding: 1rem;">
+                    <div class="container">
+                        <h1 class="display-5"><i class="fas fa-file-alt"></i> Tạo Bài Tập</h1>
+                        <p class="lead">Điền vào các thông tin dưới đây để tạo một bài tập mới.</p>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mx-auto" style="max-width: 600px;">
+                    <div class="card-header">
+                        <h4 class="mb-0 text-center">Chi Tiết Bài Tập</h4>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Create" enctype="multipart/form-data">
+                            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                            <div class="form-group">
+                                <label asp-for="AssignId" class="control-label">Mã Bài Tập</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-id-badge"></i></span>
+                                    <input asp-for="AssignId" class="form-control" value="@ViewBag.RandomAssignId" readonly />
+                                </div>
+                                <span asp-validation-for="AssignId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="AssignName" class="control-label">Tên Bài Tập</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-font"></i></span>
+                                    <input asp-for="AssignName" class="form-control" />
+                                </div>
+                                <span asp-validation-for="AssignName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Description" class="control-label">Mô tả</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-align-left"></i></span>
+                                    <textarea id="description" asp-for="Description" class="form-control"></textarea>
+                                </div>
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <input asp-for="Posttime" class="form-control" value="@ViewBag.Time" hidden />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="AssignFile1" class="control-label">Tệp Đính Kèm 1</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-file"></i></span>
+                                    <input asp-for="AssignFile1" type="file" class="form-control" onchange="previewFile(event, 'file1-preview')" />
+                                </div>
+                                <span asp-validation-for="AssignFile1" class="text-danger"></span>
+                                <img id="file1-preview" src="#" alt="Preview" style="display:none; width: 100px; height: auto;" />
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="AssignFile2" class="control-label">Tệp Đính Kèm 2</label>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-file"></i></span>
+                                    <input asp-for="AssignFile2" type="file" class="form-control" onchange="previewFile(event, 'file2-preview')" />
+                                </div>
+                                <span asp-validation-for="AssignFile2" class="text-danger"></span>
+                                <img id="file2-preview" src="#" alt="Preview" style="display:none; width: 100px; height: auto;" />
+                            </div>
+                            <div class="form-group">
+                                <input asp-for="ClassId" class="form-control" value="@ViewBag.ClassId" hidden />
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="LoaiId" class="control-label"></label>
+                                <select asp-for="LoaiId" class="form-control" asp-items="ViewBag.LoaiList"></select>
+                                <span asp-validation-for="LoaiId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group mt-4 text-center">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i>Tạo</button>
+                                <a class="btn btn-secondary ml-2" asp-action="Index" asp-route-id="@ViewBag.ClassId"><i class="fas fa-arrow-left"></i> Quay về trang chủ</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+@section Scripts {
+    <script src="https://cdn.tiny.cloud/1/iejgkjpwqv6xzvhkyzg26q3oyuth2jcljrv0b7gbdbivry53/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#description',
+            height: 300,
+            plugins: [
+                'advlist autolink lists link image charmap print preview anchor',
+                'searchreplace visualblocks code fullscreen',
+                'insertdatetime media table paste code help wordcount'
+            ],
+            toolbar: 'undo redo | formatselect | ' +
+                'bold italic backcolor | alignleft aligncenter ' +
+                'alignright alignjustify | bullist numlist outdent indent | ' +
+                'removeformat | help',
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+        });
+
+        function previewFile(event, previewId) {
+            var output = document.getElementById(previewId);
+            output.src = URL.createObjectURL(event.target.files[0]);
+            output.onload = function () {
+                URL.revokeObjectURL(output.src)
+                output.style.display = 'block';
+            }
+        }
+    </script>
+}

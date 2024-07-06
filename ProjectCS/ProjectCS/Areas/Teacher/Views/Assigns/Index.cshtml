@@ -1,0 +1,173 @@
+﻿@model IEnumerable<ProjectCS.Models.Assign>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Teacher/Views/Shared/_LayoutTeacher.cshtml";
+    var list = ViewBag.ListClass as List<Class> ?? new List<Class>();
+    var listname = ViewBag.ListName as string ?? string.Empty;
+    var listroom = ViewBag.ListRoom as string ?? string.Empty;
+}
+
+<nav class="sb-topnav navbar navbar-expand navbar-light bg-light" style="border-bottom: 1px solid #b8b6b6">
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-lg-0m" id="sidebarToggle" href="#!" style="font-size:20px; margin-left:10px"><i class="fas fa-bars"></i></button>
+    <a class="navbar-brand ps-3" style="max-width: 150px; overflow: hidden;" asp-area="Teacher" asp-controller="Teacher" asp-action="Index">
+        <img src="~/classroom-icon-free-vector.jpg" alt="Lớp Học" style="height: 40px; width: auto; display: inline-block;">
+        <span style="display: inline-block;">Lớp học </span>
+    </a>
+    <i class="fas fa-chevron-right" style="font-size: 20px; margin: 0 5px;"></i>
+    <a class="navbar-brand ps-3 nav-link" asp-area="Teacher" asp-controller="Teacher" asp-action="Details" asp-route-id="@ViewBag.ClassId">@listname <span style="font-size: 15px"><br />@listroom</span> </a>
+    <div class="ms-auto">
+        <partial name="_LoginPartial" />
+    </div>
+</nav>
+
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion" style="border-right: 1px solid #b8b6b6">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <a class="nav-link" asp-area="Teacher" asp-controller="Teacher" asp-action="Index" style="border-bottom: 1px solid #b8b6b6">Trang chủ</a>
+                    <div class="sb-sidenav-menu-heading">Chức năng</div>
+                    <a class="nav-link" asp-area="Teacher" asp-controller="Teacher" asp-action="Create">Tạo lớp học</a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Lớp học
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            @foreach (var item in list)
+                            {
+                                <a class="nav-link text-dark" asp-area="Teacher" asp-controller="Teacher" asp-action="Details" asp-route-id="@item.ClassId">@item.Name</a>
+                            }
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="sb-sidenav-footer">
+            </div>
+        </nav>
+    </div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Teacher" asp-action="Details" asp-route-id="@ViewBag.ClassId">Bảng tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" asp-controller="Assigns" asp-action="Index" asp-route-id="@ViewBag.ClassId">Thông báo trên lớp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Teacher" asp-action="ListStudent" asp-route-id="@ViewBag.ClassId">Mọi người</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Teacher" asp-action="ListAssign" asp-route-id="@ViewBag.ClassId">Điểm</a>
+                    </li>
+                </ul>
+
+                <div class="d-flex justify-content-center">
+                    <div class="col col-md-8">
+                        <div style="margin-left: 10%; margin-right:10%; margin-top:10px">
+                            <p>
+                                <div class="btn btn-primary" onclick="location.href='@Url.Action("Create", "Assigns", new { id = ViewBag.ClassId })'">
+                                    Create New
+                                </div>
+                            </p>
+                            <div>
+                                @if (Model.Any())
+                                {
+                                    <h3 class="fs-5">Thông báo</h3> <!-- Tiêu đề "Thông báo" -->
+                                    @foreach (var item in Model.Where(a => a.LoaiId == "1"))
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="card" style="margin-top:10px; padding:10px;" onclick="location.href='@Url.Action("ThongBaoDetails", "Assigns", new { id = item.AssignId })'">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div>@item.AssignName</div>
+                                                        <div class="d-flex align-items-center">
+                                                            @if (item.Posttime is DateTime postTime)
+                                                            {
+                                                                <div class="ml-auto">
+                                                                    <p class="card-text" style="font-size: 0.75em; color: #666666; margin-right:5px">
+                                                                        @postTime.ToString("dd 'thg' MM")
+                                                                    </p>
+                                                                </div>
+                                                            }
+                                                            <form method="get" action="@Url.Action("Edit", "Assigns", new {id = item.AssignId})">
+                                                                <button type="submit" class="btn btn-info" style="margin-right: 5px" name="editButton">Edit</button>
+                                                            </form>
+                                                            <form method="post">
+                                                                <button type="submit" formaction="@Url.Action("Delete", "Assigns", new { id = item.AssignId, classId = item.ClassId })" class="btn btn-danger" style="margin-right: 5px" name="deleteButton">Delete</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                    <h3 class="fs-5" style="margin-top: 5px">Bài tập</h3> <!-- Tiêu đề "Bài tập" -->
+                                    @foreach (var item in Model.Where(a => a.LoaiId == "2"))
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="card" style="margin-top:10px; padding:10px;" onclick="location.href='@Url.Action("BaiTapDetails", "Assigns", new { id = item.AssignId })'">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <div>@item.AssignName</div>
+                                                        <div class="d-flex align-items-center">
+                                                            @if (item.Posttime is DateTime postTime)
+                                                            {
+                                                                <div class="ml-auto">
+                                                                    <p class="card-text" style="font-size: 0.75em; color: #666666; margin-right:5px">
+                                                                        @postTime.ToString("dd 'thg' MM")
+                                                                    </p>
+                                                                </div>
+                                                            }
+                                                            <form method="get" action="@Url.Action("Edit", "Assigns", new {id = item.AssignId})">
+                                                                <button type="submit" class="btn btn-info" style="margin-right: 5px" name="editButton">Edit</button>
+                                                            </form>
+                                                            <form method="post">
+                                                                <button type="submit" formaction="@Url.Action("Delete", "Assigns", new { id = item.AssignId, classId = item.ClassId })" class="btn btn-danger" style="margin-right: 5px" name="deleteButton">Delete</button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="alert alert-info">Hiện tại lớp chưa có thông báo.</div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#post-form').submit(function (e) {
+                e.preventDefault();
+
+                // Lấy nội dung từ TinyMCE dưới dạng văn bản thuần túy
+                var content = tinyMCE.activeEditor.getContent({ format: 'text' });
+
+                var formData = {
+                    assignName: $('#assign-name').val(),
+                    description: content,
+                    classId: $('#class-id').val()
+                };
+
+                // Tiếp tục xử lý dữ liệu formData...
+            });
+        });
+    </script>
+}

@@ -1,0 +1,89 @@
+﻿@model IEnumerable<ProjectCS.Models.Class>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Student/Views/Shared/_LayoutStudent.cshtml";
+}
+
+<nav class="sb-topnav navbar navbar-expand navbar-light bg-light" style="border-bottom: 1px solid #b8b6b6">
+    <!-- Sidebar Toggle-->
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+    <!-- Navbar Brand-->
+    <a class="navbar-brand ps-3" class="nav-link" asp-area="Student" asp-controller="Student" asp-action="Index"> <img src="~/classroom-icon-free-vector.jpg" alt="Lớp Học" style="height: 40px; width: auto;">Lớp học</a>
+    <!-- Move partial to the right -->
+    <div class="ms-auto">
+        <partial name="_LoginPartial" />
+    </div>
+</nav>
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-light" id="sidenavAccordion" style="border-right: 1px solid #b8b6b6">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <a class="nav-link" asp-area="Student" asp-controller="Student" asp-action="Index" style="border-bottom: 1px solid #b8b6b6">Trang chủ</a>
+                    <div class="sb-sidenav-menu-heading">Chức năng</div>
+                    <a class="nav-link" asp-controller="Student" asp-action="AddStudentToList">Tham gia lớp học</a>
+                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Lớp học
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            @foreach (var item in Model)
+                            {
+                                <a class="nav-link text-dark" asp-area="Student" asp-controller="Student" asp-action="Details" asp-route-id="@item.ClassId">@item.Name</a>
+                            }
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="sb-sidenav-footer">
+            </div>
+        </nav>
+    </div>
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <section class="py-2">
+                    <div class="container px-4 px-lg-5 mt-5">
+                        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4">
+                            @foreach (var item in Model)
+                            {
+                                <div class="col" style="cursor: pointer; margin-right:10px; margin-bottom:10px">
+                                    <div class="card gap-3" style="width: 18rem;">
+                                        <img src="~/Images/@item.Image" class="card-img-top" alt="..." style="height: 200px;" onclick="location.href='@Url.Action("Details", "Student", new { id = item.ClassId })'">
+                                        <div class="dropdown position-absolute top-0 end-0">
+                                            <a href="#" role="button" id="dropdownMenuButton_@item.ClassId" onclick="toggleDropdown('@item.ClassId')" style="font-size: 30px; margin-right:5px">
+                                                <i class="fa-solid fa-exclamation"></i>
+                                            </a>
+                                            <div class="dropdown-menu" id="dropdownMenu_@item.ClassId">
+                                                <a class="dropdown-item" href="@Url.Action("Delete", "Student", new { id = item.ClassId })">Xóa</a>
+                                            </div>
+                                        </div>
+                                        <div class="card-body" onclick="location.href='@Url.Action("Details", "Student", new { id = item.ClassId })'">
+                                            <h5 class="card-title">@item.Name</h5>
+                                            <p class="card-title">@item.Titlle</p>
+                                            <p class="card-title">@item.Room</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {
+                                    <script>
+                                        function toggleDropdown(@item.ClassId) {
+                                            var dropdownMenu = document.getElementById("dropdownMenu_" + @item.ClassId);
+                                            dropdownMenu.classList.toggle("show");
+                                        }
+                                    </script>
+                                }
+                            }
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</div>

@@ -1,0 +1,247 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProjectCS
+build_property.RootNamespace = ProjectCS
+build_property.ProjectDir = C:\Code\Web\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\ProjectCS\ProjectCS\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Code\Web\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\Nhom17_7340-Cuong_7575-Huy_8106-Tinh\ProjectCS\ProjectCS
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Admin/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Admin/Views/Admin/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cUmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/Assigns/BaiTapDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xBc3NpZ25zXEJhaVRhcERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/Assigns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xBc3NpZ25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/Assigns/ThongBaoDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xBc3NpZ25zXFRob25nQmFvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/Student/AddStudentToList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50XEFkZFN0dWRlbnRUb0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/Student/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/Student/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/Student/ListStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTdHVkZW50XExpc3RTdHVkZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Assigns/BaiTapDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xBc3NpZ25zXEJhaVRhcERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Assigns/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xBc3NpZ25zXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Assigns/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xBc3NpZ25zXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Assigns/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xBc3NpZ25zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Assigns/ListAssign.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xBc3NpZ25zXExpc3RBc3NpZ24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Assigns/ThongBaoDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xBc3NpZ25zXFRob25nQmFvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Teacher/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Teacher/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Teacher/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Teacher/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Teacher/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Teacher/ListAssign.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyXExpc3RBc3NpZ24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Teacher/ListStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xUZWFjaGVyXExpc3RTdHVkZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-4uz1yo48n9
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Identity/Pages/Account/_LayoutRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfTGF5b3V0UmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mlegpk92t9
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Student/Views/Shared/_LayoutStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xTaGFyZWRcX0xheW91dFN0dWRlbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-zo04vscvy0
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Areas/Teacher/Views/Shared/_LayoutTeacher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVGVhY2hlclxWaWV3c1xTaGFyZWRcX0xheW91dFRlYWNoZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-jncotwd7qi
+
+[C:/Code/Web/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/Nhom17_7340-Cuong_7575-Huy_8106-Tinh/ProjectCS/ProjectCS/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-g35f1fz9kb
